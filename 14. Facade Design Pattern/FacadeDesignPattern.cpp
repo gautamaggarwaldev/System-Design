@@ -70,7 +70,7 @@ public :
         hd.spinUp();
         os.load();
         cout << "Computer Booted Successfully!" << endl;
-    }
+    } 
 };
 
 int main() {
