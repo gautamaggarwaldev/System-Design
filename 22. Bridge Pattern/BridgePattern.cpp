@@ -1,6 +1,8 @@
 # include <iostream>
 using namespace std;
 
+// Low Level Design (Implementation)
+
 class Engine {
 public:
     virtual void start() = 0;
@@ -28,6 +30,7 @@ public:
     }
 };
 
+// High Level Design (Abstraction)
 class Car {
 protected:
     Engine* engine;
