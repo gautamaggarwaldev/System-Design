@@ -101,11 +101,12 @@ public:
 
     double distanceInKm(const Location& other) const { // use Haversine formula
         const double earthRadiusKm = 6371.0;
-        double dLat = (other.latitude - latitude) * M_PI / 180.0;
-        double dLon = (other.longitude - longitude) * M_PI / 180.0;
+        const double PI = 3.14159265358979323846;
+        double dLat = (other.latitude - latitude) * PI / 180.0;
+        double dLon = (other.longitude - longitude) * PI / 180.0;
         
         double a = sin(dLat/2) * sin(dLat/2) +
-                   cos(latitude * M_PI / 180.0) * cos(other.latitude * M_PI / 180.0) *
+                   cos(latitude * PI / 180.0) * cos(other.latitude * PI / 180.0) *
                    sin(dLon/2) * sin(dLon/2);
         double c = 2 * atan2(sqrt(a), sqrt(1-a));
         return earthRadiusKm * c;
